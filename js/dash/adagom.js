@@ -75,7 +75,7 @@ function addScript(filename) {
                   columns: [
                     { data: "firstname" },
                     { data: "lastname" },
-                    { data: "Rice" },
+                    { data: "crops" },
                     { data: "state" },
                     { data: "lga" },
                     { data: "village" },
@@ -152,7 +152,7 @@ function addScript(filename) {
                   columns: [
                     { data: "firstname" },
                     { data: "lastname" },
-                    { data: "Groundnut" },
+                    { data: "crops" },
                     { data: "state" },
                     { data: "lga" },
                     { data: "village" },
