@@ -54,6 +54,13 @@ function addScript(filename) {
         });
   
         $("#mytable_gom").ready(function () {
+          swal.fire({
+            title: "Please wait",
+            text: "Loading data ....",
+            icon: "info",
+            allowOutsideClick: false,
+            showConfirmButton: false,
+          });
           const url =
             "https://farm-aid-backend.herokuapp.com/api/farmer/state_public/Gombe";
           const token = localStorage.getItem("access_token");
@@ -122,15 +129,16 @@ function addScript(filename) {
       })
       .then(function () {
         $("#mytable_ada").fadeOut("fast");
-        swal.fire({
-          title: "Please wait",
-          text: "Loading data ....",
-          icon: "info",
-          allowOutsideClick: false,
-          showConfirmButton: false,
-        });
   
         $("#mytable_ada").ready(function () {
+          swal.fire({
+            title: "Please wait",
+            text: "Loading data ....",
+            icon: "info",
+            allowOutsideClick: false,
+            showConfirmButton: false,
+          });
+
           const url =
             "https://farm-aid-backend.herokuapp.com/api/farmer/state_public/Adamawa";
           const token = localStorage.getItem("access_token");
