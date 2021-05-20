@@ -2,18 +2,18 @@ $(document).ready((params) =>{
     addScript("https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js");
     $("#display_gom_btn").on("click", (e) => {
         e.preventDefault();
-        $("#mytable_ada").hide();
+        $("#mytable_ada").fadeOut("fast");
 
         gombefarmerSwal(2)
-        $("#mytable_gom").css("display", "block");
+        $("#mytable_gom").fadeIn("slow");
         
     });
 
     $("#display_ada_btn").on("click", (e) => {
         e.preventDefault();
-        $("#mytable_gom").hide();
+        $("#mytable_gom").fadeOut("fast");
         adamawafarmerSwal(1)
-        $("#mytable_ada").css("display", "block");
+        $("#mytable_ada").fadeIn("slow");
     });
 });
 
