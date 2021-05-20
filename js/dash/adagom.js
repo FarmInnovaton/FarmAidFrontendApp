@@ -38,22 +38,16 @@ function addScript(filename) {
       .fire({
         title: "Loading Farmers Data from Gombe",
         text: "Please wait...",
+        timer: 4000,
         allowOutsideClick: false,
         showConfirmButton: false,
         icon: "info",
       })
       .then(function () {
         $("#mytable_gom").fadeOut("fast");
-        swal.fire({
-          title: "Please wait",
-          text: "Loading data ....",
-          icon: "info",
-          allowOutsideClick: false,
-          showConfirmButton: false,
-        });
   
         $("#mytable_gom").ready(function () {
-          swal.fire({
+          Swal.fire({
             title: "Please wait",
             text: "Loading data ....",
             icon: "info",
@@ -96,6 +90,7 @@ function addScript(filename) {
                   data.length +
                   "</span>";
                 document.getElementById("gom").innerHTML = html;
+                Swal.close();
               }
   
               // End DataTable here
@@ -104,8 +99,6 @@ function addScript(filename) {
               console.error("Error:", error);
             });
         });
-  
-        Swal.close();
       });
   }
   // End of Gombe Farmers retrieval
@@ -121,6 +114,7 @@ function addScript(filename) {
       .fire({
         title: "Loading Farmers Data from Adamawa",
         text: "Please wait...",
+        timer: 4000,
         allowOutsideClick: false,
         showConfirmButton: false,
         icon: "info",
@@ -129,7 +123,7 @@ function addScript(filename) {
         $("#mytable_ada").fadeOut("fast");
   
         $("#mytable_ada").ready(function () {
-          swal.fire({
+          Swal.fire({
             title: "Please wait",
             text: "Loading data ....",
             icon: "info",
@@ -173,6 +167,7 @@ function addScript(filename) {
                   data.length +
                   "</span>";
                 document.getElementById("ada").innerHTML = html;
+                Swal.close();
               }
   
               // End DataTable here
@@ -181,8 +176,6 @@ function addScript(filename) {
               console.error("Error:", error);
             });
         });
-  
-        Swal.close();
       });
   }
   // End of Adamawa Farmers retrieval
