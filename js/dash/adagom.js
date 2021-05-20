@@ -38,7 +38,6 @@ function addScript(filename) {
       .fire({
         title: "Loading Farmers Data from Gombe",
         text: "Please wait...",
-        timer: 4000,
         allowOutsideClick: false,
         showConfirmButton: false,
         icon: "info",
@@ -122,7 +121,6 @@ function addScript(filename) {
       .fire({
         title: "Loading Farmers Data from Adamawa",
         text: "Please wait...",
-        timer: 4000,
         allowOutsideClick: false,
         showConfirmButton: false,
         icon: "info",
