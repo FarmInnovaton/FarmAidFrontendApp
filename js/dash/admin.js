@@ -1651,7 +1651,8 @@ function GapsSwal() {
         allowOutsideClick: false,
         showConfirmButton: false,
       });
-    })
+    });
+    //addScript("js/rice_gaps.js");
 }
 
 // tomatoes GAP content
@@ -2405,7 +2406,7 @@ function sorghumGapSwal(params) {
   Swal.close();
 }
 
-// ground GAP content
+// groundnut GAP content
 function groudnutGapSwal(params) {
   swal
     .fire({

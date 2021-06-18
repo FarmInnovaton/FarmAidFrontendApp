@@ -22,6 +22,7 @@
     <!--Core CSS -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="css/css-bulma.css">
     <link rel="stylesheet" href="css/css-app.css">
     <link rel="stylesheet" href="css/css-dashboard.css">
@@ -152,7 +153,7 @@
                             <li><a onclick="riceGapSwal()" href="#rice">Rice</a></li>
                             <li><a onclick="groudnutGapSwal()" href="#groundnut">Groundnut</a></li>
                             <li><a onclick="sorghumGapSwal()" href="#sorghum">Sorghum</a></li>
-                            <li><a onclick="GapsSwal()" href="#gaps">GAPS</a></li>
+                            <li><a onclick="GapsSwal()" href="#rice_gaps">GAPS</a></li>
 						</ul>
                     </li>
                     <li>
@@ -3857,9 +3858,25 @@
     <script type="text/javascript" language="javascript" src="js/dash/js-auth.js?v=39"></script>
     <script src="js/dash/admin.js?v=42"></script>
     <script src="js/gap.js?v=39"></script>
-    <script src="js/gaps.js?v=39"></script>
     <script src="js/complete_gap.js?v=39"></script>
     <script src="/js/dash/ussd_farmer.js?v=39"></script>
+    <script>
+        function addScript(filename) {
+            var head = document.getElementsByTagName("head")[0];
+        
+            var script = document.createElement("script");
+            script.src = filename;
+            script.type = "text/javascript";
+        
+            head.append(script);
+        }
+        $(".rice-steps").ready(e => {
+            console.log("Rice GAP Editing...");
+            addScript("js/rice_gaps.js");
+        });
+
+    </script>
+
     
 </body>
 
