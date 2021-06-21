@@ -3748,14 +3748,16 @@ function maSMS(params) {
       icon: "info",
     })
     .then(function () {
+      Swal.fire({
+        title: "Please wait",
+        text: "Loading data ....",
+        icon: "info",
+        allowOutsideClick: false,
+        showConfirmButton: false,
+      });
+
       $("#ma_sms_log").ready(function () {
-        Swal.fire({
-          title: "Please wait",
-          text: "Loading data ....",
-          icon: "info",
-          allowOutsideClick: false,
-          showConfirmButton: false,
-        });
+        console.log("Inside loging...");
         const url = "https://farm-aid-backend.herokuapp.com/api/masms";
         const token = localStorage.getItem("access_token");
         const headers = new Headers();
